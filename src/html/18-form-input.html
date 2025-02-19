@@ -9,7 +9,7 @@
     <h1>form 관련 요소</h1>
     <h2>input 요소</h2>
     <!-- 한줄 입력서식 -->
-    <form action="/">
+    <form action="https://formspree.io/f/xeqwwbwk">
       <fieldset>
         <legend>폼 서식</legend>
         <div>
@@ -20,8 +20,11 @@
             id="userName"
             required
             placeholder="예) 김연호"
+            maxlength="5"
+            minlength="3"
           />
         </div>
+        <!-- 비밀번호입력서식 -->
         <div>
           <label for="userPwd">비밀번호</label>
           <input
@@ -32,15 +35,77 @@
             placeholder="8자리 이상"
           />
         </div>
+        <!-- 검색 입력 서식 -->
         <div>
           <label for="likelionSearch">검색</label>
           <input type="search" name="likelionSearch" id="likelionSearch" />
         </div>
+        <!-- 이메일 입력 서식 -->
         <div>
           <label for="userEmail">이메일</label>
           <input type="email" name="userEmail" id="userEmail" required />
         </div>
+        <!-- tel 유형의 입력서식 -->
+        <div>
+          <label for="userPhone">연락처</label>
+          <input type="tel" name="userPhone" id="userPhone" required />
+        </div>
+        <!-- checkbox서식 -->
+        <div>
+          <input
+            type="checkbox"
+            value="html"
+            checked
+            name="classLikelion"
+            id="classHtml"
+          />
+          <label for="classHtml">HTML</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            value="css"
+            name="classLikelion"
+            id="classCss"
+          />
+          <label for="classCss">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" value="js" name="classLikelion" id="classJs" />
+          <label for="classJs">JS</label>
+        </div>
+        <!-- 라디오오 서식 -->
+        <div>
+          <input
+            type="radio"
+            value="classRoom1"
+            name="classRoom"
+            id="classRoom1"
+          />
+          <label for="classRoom1">회고 1팀</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            value="classRoom2"
+            name="classRoom"
+            id="classRoom2"
+          />
+          <label for="classRoom2">회고 2팀</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            value="classRoom3"
+            checked
+            name="classRoom"
+            id="classRoom3"
+          />
+          <label for="classRoom3">회고 2팀</label>
+        </div>
+        <!-- 전송 버튼 -->
         <input type="submit" value="전송" />
+        <button type="submit">전송</button>
       </fieldset>
     </form>
   </body>
