@@ -1,0 +1,71 @@
+body {
+  background-color: #ffc;
+}
+
+/* 태그 선택자 */
+p {
+  color: red;
+  /* 이렇게 주면 p에도hover를 줄 수 있다 */
+  &:hover {
+    background-color: skyblue;
+  }
+  /* p요소는 포커스를 받을수 있지 않다, 강제로 받으려면 tabindex속서을 줘야함함 */
+  &:focus {
+    border: 10px solid red;
+  }
+}
+
+/* 클래스 선택자 */
+.like {
+  color: green;
+}
+
+/* 아이디 선택자 */
+#lion {
+  color: blue;
+}
+
+/* 속성 선택자 */
+[title] {
+  color: purple;
+}
+
+a[href^='https'] {
+  text-decoration: none;
+}
+
+a[href$='pdf'] {
+  background-color: violet;
+}
+
+/* 가상 클래스 선택자 */
+/* 한번도 방문하지 않았을떄 하이퍼링크색 변경경 */
+a:link {
+  color: black;
+}
+/* 한번이라도 방문한 하이퍼 링크 색변경경 */
+a:visited {
+  color: olive;
+}
+/* 마우스를 올렸을때 */
+a:hover {
+  color: blue;
+}
+/* 포커스를 받았을때때 */
+a:focus {
+  color: aqua;
+}
+/* 클릭해서 액티브 됐을때 잠깐 */
+a:active {
+  background-color: white;
+}
+
+/* 가상요소 선택자 */
+/* before와 after는 반드시 content요소가 있어야한다. */
+h1::before {
+  content: '멋사';
+}
+
+h1::after {
+  content: '13기';
+}
