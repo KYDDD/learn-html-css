@@ -1,0 +1,33 @@
+:root {
+  /* font-size: 10px; */
+  font-size: 1vw;
+}
+
+/* font-family속성 - 글꼴꼴 */
+body {
+  font-family: 'SUIT', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+/* font 관련 속성 -  글자 크기, 굵기, 기울임 꼴꼴 */
+.size {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  /* 한줄의 높이 무조건 글자 크기보다는 커야함 보편적으로 글자보다 여유있게줌 */
+  line-height: 1.5;
+  /* small-caps를 사용할시 소문자를 작은 대문자로 변형시킨다. 기본은 normal이다. */
+  font-variant: small-caps;
+  font-family: 'pretendard variable', sans-serif;
+  /* 위의 코드를 한줄로 한번에 적용 값과 값 사이에 한줄을 
+  띄운다는 것은 단축된 표기법이라는 의미이다.
+  폰트의 단축속성은 글자 크기와 글꼴은 필수속성이다.*/
+  font: bold italic small-caps 12px /1.5 'Pretendard variable';
+}
+
+/* 단위 - rem */
