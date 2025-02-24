@@ -1,0 +1,18 @@
+/* 배경 색상 */
+body {
+  background-color: hsl(180, 80%, 50%);
+  background-image: url(/src/assets/images/rabbit.png);
+  /* 배경 이미지 반복 여부 (반복안함) */
+  background-repeat: no-repeat;
+  /* 배경 이미지 위치 (단축 표기법)*/
+  background-position: 50% 0;
+  /* body요소의 최소 높이를 지정할때 설정한다 */
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: 100px 130px;
+  background:
+    url(/src/assets/images/cloud.png) no-repeat 0 100px fixed,
+    url(/src/assets/images/sun.png) no-repeat 150px 50px /150px 150px fixed,
+    linear-gradient(red, green),
+    pink;
+}
