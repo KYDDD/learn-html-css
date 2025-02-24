@@ -1,0 +1,86 @@
+/* 전역 변수 정의 */
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: orange;
+}
+:root {
+  /* 색상 팔레트 */
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --green: #0f0;
+  --blue: #00f;
+  --orange: orange;
+  --yellow: yellow;
+  --light-blue: aqua;
+
+  /* 주요색상 */
+  --primary-color: var(--orange);
+  --secondary-color: var(--light-blue);
+  --accent-color: var(--yellow);
+  --border-color: var(--red);
+  /* size */
+  --small: 0.75rem;
+  --medium: 0.875rem;
+  --defalut: 1rem;
+  --large: 1.125rem;
+}
+.wrapper {
+  button {
+    font-size: var(--font-size, 1rem);
+    background-color: var(--bg-color, #fff);
+    color: var(--primary-color, #000);
+  }
+  button.open {
+    --font-size: var(--small);
+  }
+  button.close {
+    --font-size: var(--defalut);
+  }
+  button.popup {
+    --text-color: var(--blue);
+  }
+  button.info {
+    --bg-color: var(--white);
+  }
+}
+
+.text-card-1 {
+  /* --secondary-color: #c76e9a; */
+  --bg-color: var(--green);
+  --border-color: var(--red);
+  h1 {
+    background-color: var(--bg-color, #2ecc71);
+  }
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+.text-card-2 {
+  /* --secondary-color: #c76e9a; */
+  --bg-color: var(--blue);
+  --border-color: var(--green);
+  h1 {
+    background-color: var(--bg-color, #2ecc71);
+  }
+  p {
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--border-color);
+  }
+}
+
+.container {
+  color: var(--text-color);
+  .parent {
+    --text-color: blue;
+
+    .child {
+      color: var(--text-color);
+    }
+  }
+}

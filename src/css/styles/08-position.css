@@ -29,6 +29,11 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
+  /* 정중앙에 오게하고 싶을때 
+  css  
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); */
 }
 
 h6 {
