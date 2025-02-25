@@ -5,15 +5,20 @@ body {
 }
 
 .card {
-  background-color: pink;
+  /* BFC - overflow:hidden, display:flow-root, float:left, position:absolute */
+  /* background-color: pink; */
   margin: 2em; /* 16 * 2 = 32px */
-  border: 1px solid red;
+  border: 1px solid #aaa;
   border-radius: 0.5rem;
   padding: 2em;
 
+  &.good-partner {
+    display: flow-root;
+  }
+
   /* 제목 */
   .subject {
-    background-color: skyblue;
+    /* background-color: skyblue; */
     font-size: 1.5rem;
     font-weight: 600;
 
@@ -26,7 +31,27 @@ body {
     }
   }
 
-  img {
-    width: 100px;
+  .thumbnail {
+    --radius: 50%;
+
+    border: 1px solid #ccc;
+    float: left;
+    margin: 1em;
+    padding: 0.625em;
+    border-radius: var(--radius);
+    width: 120px;
+    shape-outside: circle(50%);
+
+    img {
+      max-width: 100%; /* 80px */
+      border-radius: var(--radius);
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: 0 -20px;
+    }
+  }
+
+  .content {
+    margin-top: 0.625rem;
   }
 }
