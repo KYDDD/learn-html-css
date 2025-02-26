@@ -1,0 +1,33 @@
+body {
+  margin: 50px;
+}
+
+.goods {
+  .milk {
+    background-image: url(/src/assets/images/placeholder.png);
+    background-repeat: no-repeat;
+    background-position: .5rem; 50%;
+    padding-left: 5.25rem;
+    border: 1px solid red;
+    position: relative;
+    height: 70px;
+
+    .count {
+      border: 1px solid #b3b3b3;
+      position: absolute;
+      top: 22px;
+      right: 8px;
+      border-radius: 18px;
+      padding: 2px 8px;
+      background-color: #EEE;
+    }
+
+    .name{
+      margin-top: 15px;
+    }
+
+    .price{
+      margin-top: 8px;
+    }
+  }
+}
