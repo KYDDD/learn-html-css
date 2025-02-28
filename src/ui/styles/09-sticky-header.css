@@ -11,10 +11,13 @@ h1 {
   padding: 1rem;
   background: #fff;
   position: sticky;
-  /* top: 0; */
+  /* top: 0;  -> inset-block-start로 사용가능능*/
   inset-block-start: 0;
   /* 겹치는 순서를 제어 */
   z-index: 1;
+  /* z-index를 1을 줘야 마지막에 테이블이 
+  올라갈때 제목 밑으로 해서 올라감
+  backgroundcolor를 흰색을 준것도 이런이유이다. */
 }
 
 .container {
