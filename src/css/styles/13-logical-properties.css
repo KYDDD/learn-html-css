@@ -2,15 +2,21 @@
   writing-mode: vertical-rl;
   border: 1px solid currentColor;
   color: green;
+
+  /* float: left속성을 논리속성으로 지정 */
+  float: inline-start;
   /* 가로 크기를 width속성이 아닌 논리 속성으로 지정 */
   inline-size: 400px;
   /* 세로 크기를 height속성이 아닌 논리 속성으로 지정 */
   block-size: 100px;
   overflow: auto;
+  /* padding-left, padding-right속성을 논리 속성으로 지정 */
   padding-inline-start: 20px;
   padding-inline-end: 50px;
-  /* padding-inline: 20px;
+
+  /* 상하좌우를 한번에 논리속성으로 지정 */
+  padding-inline: 20px;
   padding-block: 10px;
   margin-inline: 30px;
   margin-block: 50px;
-} */
+}
