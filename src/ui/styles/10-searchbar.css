@@ -18,7 +18,7 @@ body {
       transition: rotate 0.4s;
     } */
     &:focus {
-      outline: none;
+      /* outline: none; */
       /* svg {
         rotate: 1turn;
       } */
