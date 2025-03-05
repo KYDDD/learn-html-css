@@ -9,5 +9,13 @@ body {
 /* 링크 스타일 */
 a {
   color: inherit;
-  text-decoration: cone;
+  text-decoration: none;
+}
+
+/* Components Container 스타일링 */
+.components-container {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1rem;
+  padding: 1rem;
 }

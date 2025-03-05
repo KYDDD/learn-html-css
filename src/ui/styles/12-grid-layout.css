@@ -1,0 +1,47 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+
+.header {
+  background: var(--pastel-coral);
+  height: 10vh;
+}
+
+/* 내비게이션 */
+.navigation {
+  background: var(--pastel-green);
+  height: 15vh;
+}
+
+.content-sidebar {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+/* 메인 콘텐츠 */
+.content {
+  background: var(--pastel-aqua);
+  height: 40vh;
+  @media (min-width: 768px) {
+    block-size: 65vh;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
+
+/* 사이드 바 */
+.sidebar {
+  background: var(--pastel-yellow);
+  height: 25vh;
+  @media (min-width: 768px) {
+    block-size: 65vh;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
+
+/* 푸터 */
+.footer {
+  background: var(--pastel-lavender);
+  height: 10vh;
+}
