@@ -1,6 +1,41 @@
 @import '/src/common/modern-reset.css';
 @import '/src/common/theme.css';
 
+/* 내가 짠 코드 
+.container {
+  display: grid;
+  grid-template-rows: repeat(8, calc(100vh / 8));
+  grid-template-columns: repeat(12, 1fr);
+}
+
+
+.header {
+  background: var(--pastel-coral);
+  grid-area: 1/1/2/13;
+}
+
+.navigation {
+  background: var(--pastel-green);
+  grid-area: 2/1/7/4;
+}
+
+
+.content {
+  background: var(--pastel-aqua);
+  grid-area: 2/4/7/10;
+}
+
+.sidebar {
+  background: var(--pastel-yellow);
+  grid-area: 2/10/7/13;
+}
+
+.footer {
+  background: var(--pastel-lavender);
+  grid-area: 7/1/9/13;
+} */
+
+/* 헤더 */
 .header {
   background: var(--pastel-coral);
   height: 10vh;
@@ -12,36 +47,62 @@
   height: 15vh;
 }
 
-.content-sidebar {
-  @media (min-width: 768px) {
-    display: flex;
-  }
-}
-
 /* 메인 콘텐츠 */
 .content {
   background: var(--pastel-aqua);
   height: 40vh;
-  @media (min-width: 768px) {
-    block-size: 65vh;
-    flex-basis: 0;
-    flex-grow: 1;
-  }
 }
 
 /* 사이드 바 */
 .sidebar {
   background: var(--pastel-yellow);
   height: 25vh;
-  @media (min-width: 768px) {
-    block-size: 65vh;
-    flex-basis: 0;
-    flex-grow: 1;
-  }
 }
 
 /* 푸터 */
 .footer {
   background: var(--pastel-lavender);
   height: 10vh;
+}
+
+/* 그리드를 활용한 반응형 레이아웃 */
+/* 그리드 컨테이너 */
+.container {
+  display: grid;
+  padding: 0 20px;
+
+  /* grid item은 order 속성을 활용하여 배치 순서를 변경할 수 있다. 
+  .navigation{
+    order: 1;
+  } */
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 800px;
+    max-inline-size: 800px;
+    margin: 0 auto;
+
+    .header,
+    .navigation,
+    .footer {
+      grid-column: 1 / -1;
+    }
+
+    .content,
+    .sidebar {
+      grid-column: span 6;
+      height: 40vh;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 1280px;
+      max-inline-size: 1280px;
+
+      .navigation,
+      .sidebar {
+        grid-column: span 3;
+        height: 40vh;
+      }
+    }
+  }
 }

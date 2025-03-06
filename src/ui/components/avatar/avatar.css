@@ -9,10 +9,10 @@
   --state: #dbdbdb;
   --state-border: #fff;
   --state-active: #4cfe88;
-  /* background-color: yellow; */
+
   width: var(--size);
   position: relative;
-  display: inline-block;
+
   img {
     width: 100%;
     aspect-ratio: 1/1;

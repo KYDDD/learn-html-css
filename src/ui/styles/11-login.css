@@ -25,15 +25,15 @@
   .logo {
     margin: 0 auto;
 
-    @media (max-width: 768px) {
-      width: 180px;
-      inline-size: 180px;
+    @media (max-width: 48rem) {
+      width: 11.25rem;
+      inline-size: 11.25rem;
     }
   }
 }
 
+/* 로그인 폼 */
 .login-form {
-  /* background: pink; */
   display: flex;
   flex-flow: column nowrap;
   row-gap: var(--spacing-5);
@@ -43,11 +43,11 @@
   }
 
   .checkbox-wrapper {
-    /* background-color: yellow; */
     order: 1;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: start;
 
     .text-link {
       margin-left: auto;

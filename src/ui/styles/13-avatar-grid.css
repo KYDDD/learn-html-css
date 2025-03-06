@@ -1,0 +1,25 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/ui/components/avatar/avatar.css';
+
+.img-avatar,
+.state {
+  position: initial !important;
+}
+
+/* 그리드 활용 */
+.img-avatar {
+  display: grid;
+
+  img,
+  figcaption {
+    /* 너 첫번째 셀에 둘다 배치되라!! */
+    grid-area: 1/1/2/2;
+  }
+
+  figcaption {
+    /* justify-self: end;
+    align-self: end; */
+    place-self: end;
+  }
+}

@@ -91,7 +91,7 @@
   display: grid;
   min-width: 642px;
   grid-template-rows: repeat(4, 50px);
-  /* 하나의 컬럼의 크기가 아무리 작아져도 150px이하로는 떨어지지 않겠다. */
+  /* 하나의 컬럼의 크기가 아무리 작아져도 100px이하로는 떨어지지 않겠다. */
   grid-template-columns: repeat(4, minmax(100px, 1fr));
   grid-template-areas:
     'item1 item1 item1 item2'
