@@ -1,0 +1,60 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+body {
+  margin: 20px;
+}
+
+/* 카드 컴포넌트 */
+.card {
+  border: 1px solid var(--pastel-gray);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px 1px var(--pastel-gray);
+  display: flex;
+  flex-flow: column nowrap;
+
+  .subject {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .thumbnail {
+    /* 원본 이미지 크기를 3 / 2 비율로 조절하고 위치 설정 */
+    img {
+      aspect-ratio: 3/2;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 0;
+    }
+  }
+
+  .content {
+    line-height: 1.5;
+  }
+
+  .more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--pastel-dark-blue);
+    color: var(--white);
+    padding: 1em;
+  }
+}
+
+/* 카드 컨테이너 */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  gap: 20px;
+
+  /* 서브 그리드 */
+  .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+}
